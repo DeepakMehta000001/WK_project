@@ -8,18 +8,16 @@ class CategoryListAPIView(ListAPIView):
 	serializer_class = CategorySerializer
 
 
-class SubCategoryListAPIView(ListAPIView):
-	#lookup_field = 'categoryPK'
-	#cid = kwargs['categoryPK']
-	#print("lf->",lookup_field)
+class SubCategoryByList(ListAPIView):
 	serializer_class = SubCategorySerializer
 	def get_queryset(self):
 		return SubCategoryModel.objects.filter(categoryPK=self.kwargs['categoryPK'])
-	#queryset = SubCategoryModel.objects.all()
-	#serializer_class = SubCategorySerializer
-	#queryset = get_query()
-	
 
+
+class SubCategoryListAPIView(ListAPIView):
+	serializer_class = SubCategorySerializer
+	def get_queryset(self):
+		return SubCategoryModel.objects.filter(categoryPK=self.kwargs['categoryPK'])
 #class SubCategoryDetailAPIView(RetrieveAPIView):
 #	queryset = SubCategoryModel.objects.all()
 #	serializer_class = SubCategorySerializer
