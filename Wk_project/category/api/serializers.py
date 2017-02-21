@@ -40,3 +40,13 @@ class ProductBySubCategorySerializer(ModelSerializer):
 			'subcategoryPK',
 			'product_name',
 		]
+
+class ProductCreateSerializer(ModelSerializer):
+	class Meta:
+		model = ProductModel
+		fields = [
+			#'id',
+			'categoryPK',
+			'subcategoryPK',
+			'product_name',
+		]
