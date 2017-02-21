@@ -1,0 +1,1 @@
+@"c:\users\arundeepak\desktop\whizkidz\wk_project\scripts\python.exe" "c:\users\arundeepak\desktop\whizkidz\wk_project\Scripts\markdown_py" %*

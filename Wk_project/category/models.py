@@ -16,6 +16,7 @@ class SubCategoryModel(models.Model):
 		return self.subcategory_name
 
 class ProductModel(models.Model):
+	#categoryPK = models.ForeignKey(CategoryModel,on_delete=models.CASCADE)
 	subcategoryPK = models.ForeignKey(SubCategoryModel,on_delete=models.CASCADE)
 	product_name = models.CharField(max_length=50)
 
